@@ -6,6 +6,8 @@ require "./player"
 require "./computer"
 
 
-play = Player.new
+game = Game.new
+board = Board.new(board)
 
-game.play
+game.greeting
+board.display

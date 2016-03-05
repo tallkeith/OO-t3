@@ -1,5 +1,6 @@
 class Board
-	def initialize
+	def initialize(board)
+		@board = board
 	end
 
 	WINS = [[1,2,3],
@@ -28,14 +29,14 @@ class Board
 
 	def tic_tac_toe
 	  board = (1..9).to_a
-	  current_player = choose_player
-	  greeting
-	  until game_over?(board)
-	    move = take_turn(board, current_player)
-	    board[move] = current_player
-	    current_player = switch_player(current_player) unless game_over?(board)
-	  end
-	  finito(current_player, board)
+	#   current_player = choose_player
+	#   greeting
+	#   until game_over?(board)
+	#     move = take_turn(board, current_player)
+	#     board[move] = current_player
+	#     current_player = switch_player(current_player) unless game_over?(board)
+	#   end
+	#   finito(current_player, board)
 	end
 
 end
