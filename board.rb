@@ -1,6 +1,7 @@
 class Board
 	def initialize(size)
 		@size = []
+		@board = (1..size).to_a
 		
 	end
 
@@ -15,13 +16,9 @@ class Board
 
 
 	def display
-		puts "
-    -----------
-   | #{@size[0]} | #{@size[1]} | #{@size[2]} |
-   | #{@size[3]} | #{@size[4]} | #{@size[5]} |
-   | #{@size[6]} | #{@size[7]} | #{@size[8]} |
-    -----------
-"
+		3.times do |row|
+			puts @board[row * 3, 3].join(" | ")
+		end
 	end
 
 	def available_moves(board)
