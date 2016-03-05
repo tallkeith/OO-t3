@@ -7,7 +7,7 @@ require "./computer"
 
 
 game = Game.new
-board = Board.new(board)
+board = Board.new(9)
 
 game.greeting
 board.display

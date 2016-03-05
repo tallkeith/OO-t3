@@ -1,6 +1,7 @@
 class Board
-	def initialize(board)
-		@board = board
+	def initialize(size)
+		@size = []
+		
 	end
 
 	WINS = [[1,2,3],
@@ -16,9 +17,9 @@ class Board
 	def display
 		puts "
     -----------
-   | #{board[0]} | #{board[1]} | #{board[2]} |
-   | #{board[3]} | #{board[4]} | #{board[5]} |
-   | #{board[6]} | #{board[7]} | #{board[8]} |
+   | #{@size[0]} | #{@size[1]} | #{@size[2]} |
+   | #{@size[3]} | #{@size[4]} | #{@size[5]} |
+   | #{@size[6]} | #{@size[7]} | #{@size[8]} |
     -----------
 "
 	end
