@@ -11,7 +11,7 @@ class Game
 		player.name
 		player.choose_piece
 		player.num_players
-		player.take_turn
+		player.make_move
 		
 	end
 

@@ -1,10 +1,11 @@
+require "pry"
+
 class Player
 	def initilaize(board)
-		@board = board
+		@board = board(size)
 	end
 
 	def num_players
-		
 		puts "How many players? Choose 0 - 2"
 		@players = gets.chomp.to_i
 	end
@@ -14,12 +15,13 @@ class Player
 		@player_name = gets.chomp
 	end
 
-	def take_turn
+	def make_move
 	  
-	  puts "#{@player_name.capitalize}, please choose a space to move to. (1-9)"
+	  puts "#{@player_name}, please choose a space to move to. (1-9)"
 	  @board.display
+	  binding.pry
 	  choice = gets.chomp.to_i
-	  until available_moves.include?(choice)
+	  until @board.available_moves(board).include?(choice)
 	    puts "You have to choose an available board position. Please pick again."
 	    choice = gets.chomp.to_i
 	  end
