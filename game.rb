@@ -1,5 +1,18 @@
 class Game
-	def initialize
+	def initialize(board, player, computer)
+		@board = board
+		@player = player
+		@computer = computer
+	end
+
+	def play(board, player, computer)
+		greeting
+		board.display
+		player.name
+		player.choose_piece
+		player.num_players
+		player.take_turn
+		
 	end
 
 	def greeting

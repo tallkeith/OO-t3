@@ -1,5 +1,12 @@
 class Player
-	def initilaize
+	def initilaize(board)
+		@board = board
+	end
+
+	def num_players
+		
+		puts "How many players? Choose 0 - 2"
+		@players = gets.chomp.to_i
 	end
 
 	def name
@@ -7,11 +14,12 @@ class Player
 		@player_name = gets.chomp
 	end
 
-	def take_turn(board, player)
-	  show_board(board)
-	  puts "Player #{player}, please choose a space to move to. (1-9)"
+	def take_turn
+	  
+	  puts "#{@player_name.capitalize}, please choose a space to move to. (1-9)"
+	  @board.display
 	  choice = gets.chomp.to_i
-	  until available_moves(board).include?(choice)
+	  until available_moves.include?(choice)
 	    puts "You have to choose an available board position. Please pick again."
 	    choice = gets.chomp.to_i
 	  end

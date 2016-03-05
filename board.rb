@@ -26,7 +26,7 @@ class Board
 	end
 
 	def tic_tac_toe
-	  board = (1..9).to_a
+	  
 	#   current_player = choose_player
 	#   greeting
 	#   until game_over?(board)
