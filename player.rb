@@ -1,8 +1,8 @@
 require "pry"
 
 class Player
-	def initilaize(board)
-		@board = board(size)
+	def initilaize
+		
 	end
 
 	def num_players
@@ -16,23 +16,6 @@ class Player
 		puts "What is your name?"
 		@player_name = gets.chomp
 		@player_name
-	end
-
-	def make_move(board)
-	  puts "#{@player_name.capitalize}, please choose a space to move to. (1-9)"
-	  board.display
-	  puts
-	  choice = gets.chomp.to_i
-	  puts
-	  binding.pry
-	  until @board.available_moves(board).include?(choice)
-	    puts "You have to choose an available board position. Please pick again."
-	    choice = gets.chomp.to_i
-	  end
-
-	  choice = choice - 1
-	  @board.push(choice)
-	  choice
 	end
 
 	def choose_piece
@@ -49,5 +32,20 @@ class Player
 		@piece
 	end
 
+	def make_move(board)
+	  puts "#{@player_name.capitalize}, please choose a space to move to. (1-9)"
+	  board.display
+	  puts
+	  choice = gets.chomp.to_i
+	  puts
+	  
+	  until (1..9).include?(choice)
+	    puts "You have to choose an available board position (1-9). Please pick again."
+	    board.display
+	    choice = gets.chomp.to_i
+	  end
+
+	  choice
+	end
 
 end

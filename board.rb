@@ -25,6 +25,12 @@ class Board
 	  @board.select { |piece| @piece.is_a?(Fixnum) }
 	end
 
+# until @board.available_moves(board).include?(choice)
+# 	    puts "You have to choose an available board position. Please pick again."
+# 	    choice = gets.chomp.to_i
+# 	  end
+
+
 	def tic_tac_toe
 	  
 	#   current_player = choose_player
