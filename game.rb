@@ -11,7 +11,7 @@ class Game
 		player.name
 		player.choose_piece
 		player.num_players
-		player.make_move
+		player.make_move(board)
 		
 	end
 

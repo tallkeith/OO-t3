@@ -22,7 +22,7 @@ class Board
 	end
 
 	def available_moves(board)
-	  board.select { |piece| piece.is_a?(Fixnum) }
+	  @size.select { |piece| @piece.is_a?(Fixnum) }
 	end
 
 	def tic_tac_toe
