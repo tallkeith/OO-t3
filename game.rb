@@ -6,20 +6,20 @@ class Game
 	end
 
 	def play(board, player, computer)
-		greeting
-		board.display
-		player.name
-		player.choose_piece
-		player.num_players
+		greeting(board, player, computer)
 		player.make_move(board)
 		
 	end
 
-	def greeting
+	def greeting(board, player, computer)
 	  puts
 	  puts "Welcome to Tic Tac Toe!"
 	  puts "Try to get three in a row to win..."
 	  puts
+	  board.display
+	  player.name
+		player.choose_piece
+		player.num_players
 	end
 
 	def switch_player(player)
