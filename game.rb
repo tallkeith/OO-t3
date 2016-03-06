@@ -8,6 +8,7 @@ class Game
 	def play(board, player, computer)
 		greeting(board, player, computer)
 		player.make_move(board)
+		board.player_move(board, player)
 		
 	end
 

@@ -38,13 +38,11 @@ class Player
 	  puts
 	  choice = gets.chomp.to_i
 	  puts
-	  
 	  until (1..9).include?(choice)
 	    puts "You have to choose an available board position (1-9). Please pick again."
 	    board.display
 	    choice = gets.chomp.to_i
 	  end
-
 	  choice
 	end
 

@@ -25,6 +25,17 @@ class Board
 	  @board.select { |piece| @piece.is_a?(Fixnum) }
 	end
 
+	def place(player, location)
+		@board.push(player.piece)
+	end
+
+	def player_move(board, player)
+		
+		move = player.make_move(board)
+		@board.place(player, move)
+		@board.display
+	end
+
 # until @board.available_moves(board).include?(choice)
 # 	    puts "You have to choose an available board position. Please pick again."
 # 	    choice = gets.chomp.to_i
