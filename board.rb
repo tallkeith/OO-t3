@@ -25,14 +25,14 @@ class Board
 	  @board.select { |piece| @piece.is_a?(Fixnum) }
 	end
 
-	def place(player, location)
-		@board.push(player.piece)
+	def place(player, move)
+		@board[player.make_move(@board) - 1].push(player.piece)
 	end
 
 	def player_move(board, player)
 		
 		move = player.make_move(board)
-		@board.place(player, move)
+		place(player, move)
 		@board.display
 	end
 
