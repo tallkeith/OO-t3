@@ -36,6 +36,20 @@ class Board
 		@board.display
 	end
 
+	def win?(board)
+	  WINS.any? do |x, y, z|
+	    board[x - 1] == board[y - 1] && board[y - 1] == board[z - 1]
+	  end
+	end
+
+	def draw?(board)
+	  board.all? { |piece| piece.is_a?(String) }
+	end
+
+	def game_over?(board)
+	  win?(board) || draw?(board)
+	end
+
 # until @board.available_moves(board).include?(choice)
 # 	    puts "You have to choose an available board position. Please pick again."
 # 	    choice = gets.chomp.to_i
